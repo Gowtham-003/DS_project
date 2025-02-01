@@ -22,7 +22,7 @@ print(data.info())
 
 hist_bar=data.hist(bins=30, figsize=(15,10),color="Red")
 plt.tight_layout()
-# plt.show()
+plt.show()
 plt.close()
 
 """Findings"""
@@ -68,7 +68,7 @@ print(stayed_df.describe())
 
 plt.figure(figsize=(25,12))
 sns.countplot(x="Age",hue="Attrition",data=data)
-# plt.show()
+plt.show()
 plt.close()
 
 """Plotting the employees who left and stayed based on JobRole,MaritalStatus,JobInvolvement,JobLevel"""
@@ -89,7 +89,7 @@ plt.subplot(414)
 sns.countplot(x="JobLevel",hue="Attrition",data=data)
 
 plt.tight_layout()
-# plt.show()
+plt.show()
 plt.close()
 
 """Findings"""
@@ -109,7 +109,7 @@ sns.kdeplot(left_df["DistanceFromHome"],label="Employees who left",fill=True,col
 sns.kdeplot(stayed_df["DistanceFromHome"],label="Employee who stayed",fill=True,color="b")
 plt.xlabel("Distance from home")
 plt.legend()
-# plt.show()
+plt.show()
 plt.close()
 
 plt.figure(figsize=(15,10))
@@ -117,7 +117,7 @@ plt.figure(figsize=(15,10))
 sns.kdeplot(left_df["TotalWorkingYears"],label="Employees who left",fill=True,color="g")
 sns.kdeplot(stayed_df["TotalWorkingYears"],label="Employees who stayed",fill=True,color="r")
 plt.legend()
-# plt.show()
+plt.show()
 plt.close()
 
 plt.figure(figsize=(10,5))
@@ -125,7 +125,7 @@ plt.figure(figsize=(10,5))
 sns.kdeplot(left_df["YearsWithCurrManager"],label="Employees who left",fill=True,color="g")
 sns.kdeplot(stayed_df["YearsWithCurrManager"],label="Employees who stayed",fill=True,color="b")
 plt.legend()
-# plt.show()
+plt.show()
 plt.close()
 
 
@@ -137,12 +137,12 @@ plt.close()
 """Using Boxplot for Gender vs MonthlyIncome and JobRole vs MonthlyIncome"""
 
 sns.boxplot(x="MonthlyIncome",y="Gender",data=data)
-# plt.show()
+plt.show()
 plt.close()
 
 plt.figure(figsize=(10,5))
 sns.boxplot(x="MonthlyIncome",y="JobRole",data=data)
-# plt.show()
+plt.show()
 plt.close()
 
 """Findings"""
@@ -225,7 +225,7 @@ print("Accuracy=",accuracy)
 
 cm=confusion_matrix(y_test,prediction)
 sns.heatmap(cm,annot=True)
-# plt.show()
+plt.show()
 plt.close()
 
 class_report=classification_report(y_test,prediction)
@@ -242,7 +242,7 @@ print(prediction)
 
 c_m=confusion_matrix(y_test,prediction)
 sns.heatmap(c_m,annot=True)
-# plt.show()
+plt.show()
 plt.close()
 
 classified_report=classification_report(y_test,prediction)
